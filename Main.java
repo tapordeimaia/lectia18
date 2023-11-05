@@ -1,6 +1,8 @@
 
 //import customArrayList.CustomArrayList;
 
+import customarraylist.CustomArrayList;
+
 import java.util.*;
 
 public class Main extends Object {
@@ -139,6 +141,11 @@ public class Main extends Object {
 
 
 //       System.out.println(list);
+        CustomArrayList list2 = new CustomArrayList();
+        list2.add("la");
+        list2.add("ba");
+        list2.set(1, "Lia");
+        System.out.println(list2.get(1));
 
 
 

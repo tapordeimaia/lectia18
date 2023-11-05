@@ -1,3 +1,7 @@
+package customarraylist;
+
+import java.util.ArrayList;
+
 public class CustomArrayList {
 
     String[] array = new String[5];
@@ -31,7 +35,7 @@ public class CustomArrayList {
     }
 
     public void increaseArraySize() {
-        String[] array2 = new String[array.length / 2];
+        String[] array2 = new String[array.length * 2];
 
         for (int i = 0; i < array.length; i++) {
             array2[i] = array[i];
@@ -66,4 +70,30 @@ public class CustomArrayList {
         return false;
     }
 
+    public String set(int index, String newElement){
+        String[] array2 = new String[array.length];
+        for (int i = 0; i<array.length; i++){
+            if (i==index){
+                array2[i] = newElement;
+            } else{
+                array2[i] = array[i];
+            }
+        }
+        array = array2;
+        return newElement;
+    }
+
+    public void clear(){
+        String[] array2 = new String[0];
+        array = array2;
+    }
+
+    public boolean equals(String[] customArrayList){
+        for(int i =0; i<array.length; i++){
+            if (customArrayList[i] == array[i]){
+                return true;
+            }
+        }
+        return false;
+    }
 }
